@@ -5,7 +5,20 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'Glaucous': '#7289DA',
+        'Liberty': '#465CAB',
+        'Onyx': '#424549',
+        'Gunmetal': '#282B30',
+        'EerieBlack': '#1E2124',
+        'Ruby': '#D81E5B',
+      },
+      margin: {
+        '15':   '15rem',
+        
+}
+    },
   },
   plugins: [],
 }
