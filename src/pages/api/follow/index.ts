@@ -18,7 +18,7 @@ export default async function handler(req:NextApiRequest, res: NextApiResponse){
                 userId: userId
             }})
             const followers = await prisma.user.findMany({where: {
-                id: user.followId
+                id: user[0].followId
             }})
             res.json(followers)
         }
