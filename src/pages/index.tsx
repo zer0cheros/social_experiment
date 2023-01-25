@@ -1,11 +1,12 @@
-import Footer from "../components/Footer/Footer";
+
 
 export default function Home() {
   return (
-      <div className="h-screen w-screen bg-Glaucous">
-      
-      
-      <Footer />
-      </div>
+    <div className='bg-red-500'>
+      <h1 className='text-bold text-xl'>Social experiment with tailwind and framer motion</h1>
+    </div>  
   )
+
 }
+}
+
