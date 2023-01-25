@@ -3,6 +3,7 @@ import Topbar_comp from "../../components/Topbar/Topbar_comp";
 
 export default function Home() {
   return (
+      <>
       <Topbar_comp />
       <div className="w-full min-w-600 h-screen flex justify-center items-center bg-Gunmetal">
 
@@ -14,7 +15,8 @@ export default function Home() {
       <FollowBox />
       </div>
       </div>
+      </div>
+      </>
   )
 }
-
 
