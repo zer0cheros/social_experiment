@@ -6,6 +6,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      fontFamily: {
+        body: "Roboto, sans-serif",
+        heading: '"Roboto Slab", sans-serif'
+      }
+    },
+    colors: {
+      "black": "#1E2124",
+      "darkgrey": "#282B30",
+      "grey": "#424549",
+     "darkblue": "#465CAB",
+     "blue": "#7289DA",
+     "red": "#D81E5B",
+     "white": "#C9C9C9"
+    }
       colors: {
         'Glaucous': '#7289DA',
         'Liberty': '#465CAB',
@@ -15,6 +30,7 @@ module.exports = {
         'Ruby': '#D81E5B',
       }
     },
+
   },
   plugins: [],
 }
