@@ -1,6 +1,8 @@
 import FollowBox from "../../components/FollowBox";
+import prisma from "../../core/prisma";
 
 export default function Home() {
+
   return (
       <div className="w-full h-screen flex justify-center items-center bg-EerieBlack">
       <div className='w-1/3 h-screen flex-col flex justify-center items-center '>
@@ -9,3 +11,5 @@ export default function Home() {
       </div>
   )
 }
+
+
