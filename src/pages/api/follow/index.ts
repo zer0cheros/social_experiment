@@ -6,7 +6,7 @@ export default async function handler(req:NextApiRequest, res: NextApiResponse){
     const session = await getSession({req})
     if(session){
         if(req.method == 'POST'){
-            const {id, followId} = req.body
+            const {id} = req.body
         await prisma.followers.create({data: {
             followId: session.user.id,
             userId: id
