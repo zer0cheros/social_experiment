@@ -6,26 +6,29 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        body: "Roboto, sans-serif",
-        heading: '"Roboto Slab", sans-serif'
+      minWidth: {
+        '0': '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '100%',
+        '100': '100px',
+        '200': '200px',
+        '300': '300px',
+        '400': '400px',
+        '500': '500px',
+        '600': '600px',
+        },
+      colors: {
+        'Glaucous': '#7289DA',
+        'Liberty': '#465CAB',
+        'Onyx': '#424549',
+        'Gunmetal': '#282B30',
+        'EerieBlack': '#1E2124',
+        'Ruby': '#D81E5B',
+        'RubyLight': '#db346b',
       }
     },
-    colors: {
-      "black": "#1E2124",
-      "darkgrey": "#282B30",
-      "grey": "#424549",
-     "darkblue": "#465CAB",
-     "blue": "#7289DA",
-     "red": "#D81E5B",
-     "white": "#C9C9C9",
-      'Glaucous': '#7289DA',
-      'Liberty': '#465CAB',
-      'Onyx': '#424549',
-      'Gunmetal': '#282B30',
-      'EerieBlack': '#1E2124',
-      'Ruby': '#D81E5B',
-    }
   },
   plugins: [],
 }
