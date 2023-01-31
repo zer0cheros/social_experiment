@@ -42,7 +42,7 @@ export default NextAuth({
     strategy: 'jwt'
   },
   pages: {
-    signIn: '/login',
+   
     newUser: '/register',
     error: '/auth/error'
   },
@@ -52,13 +52,14 @@ export default NextAuth({
   },
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
-    async session({session, token}){
-      session.admin = session.user.isAdmin
+    async session({session}){
+      session.userId = session.user.id
       return Promise.resolve(session);
     },
     async jwt({token, user}){
       if(user){
         token.admin = user.isAdmin
+        token.sub = user.id
       }
       return Promise.resolve(token);
     }

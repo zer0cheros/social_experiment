@@ -10,7 +10,7 @@ const GetUsers:React.FC<{users: User[]}> = ({users}) => {
             headers: {
                 'Content-type' : 'application/json'
             },
-            body : JSON.stringify(id)
+            body : JSON.stringify({id: id})
         })
     }
   return (

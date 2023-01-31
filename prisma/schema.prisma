@@ -80,7 +80,7 @@ model Comments {
 
 model Followers {
   id        Int     @id @default(autoincrement())
-  followId   Int?
+  followId   String?
   followers    User?   @relation(fields: [userId], references: [id])
   userId  Int?
 }

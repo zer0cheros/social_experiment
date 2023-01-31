@@ -7,18 +7,21 @@ export default async function handler(req:NextApiRequest, res: NextApiResponse){
     if(session){
         if(req.method == 'POST'){
             const {id} = req.body
+            console.log(id)
         await prisma.followers.create({data: {
-            followId: session.user.id,
+            followId: session.user.email,
             userId: id
         }})
+        console.log('created');
+        
         }
         if(req.method === 'GET'){
-            const userId = req.body.userId
-            const user = await prisma.followers.findMany({where: {
-                userId: userId
+            //const userId = req.body.userId
+            const user = await prisma.user.findUnique({where: {
+                email: session.user.email
             }})
-            const followers = await prisma.user.findMany({where: {
-                id: user[0].followId
+            const followers = await prisma.followers.findMany({where: {
+                followId: user.email
             }})
             res.json(followers)
         }
