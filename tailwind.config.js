@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+
       fontFamily: {
         body: "Roboto, sans-serif",
         heading: '"Roboto Slab", sans-serif'
@@ -21,6 +22,16 @@ module.exports = {
      "white": "#C9C9C9",
      
     }
+      colors: {
+        'Glaucous': '#7289DA',
+        'Liberty': '#465CAB',
+        'Onyx': '#424549',
+        'Gunmetal': '#282B30',
+        'EerieBlack': '#1E2124',
+        'Ruby': '#D81E5B',
+      }
+    },
+
   },
   plugins: [],
 }
