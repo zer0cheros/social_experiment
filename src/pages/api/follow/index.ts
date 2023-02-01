@@ -6,11 +6,12 @@ export default async function handler(req:NextApiRequest, res: NextApiResponse){
     const session = await getSession({req})
     if(session){
         if(req.method == 'POST'){
-            const {id} = req.body
+            const {id, name} = req.body
             console.log(id)
         await prisma.followers.create({data: {
             followId: session.user.email,
-            userId: id
+            userId: id,
+            userName: name
         }})
         console.log('created');
         

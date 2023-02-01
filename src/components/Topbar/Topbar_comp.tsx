@@ -9,7 +9,7 @@ const Topbar_comp = () => {
           <Link href={'/register'}><p className={styles.home_text}>Register</p></Link>
           <Link href={'/api/auth/signin'}><p>Login</p></Link>
           <Link href={'/'}><p>Home</p></Link>
-          
+          <Link href={'/follows'}><p>Friends</p></Link>
       </div>
       <div className={styles.under_bottom_topbar}>
 

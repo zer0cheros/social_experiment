@@ -31,7 +31,7 @@ module.exports = {
       margin: {
         '15':   '15rem',
         
-}
+},
       height: {
         '100': '100vh',
         '50': '50rem',
@@ -52,7 +52,6 @@ module.exports = {
         '12':   '12rem',
         '5':   '5rem', 
       },
-      }
     },
   },
   plugins: [],

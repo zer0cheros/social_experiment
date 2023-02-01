@@ -83,4 +83,5 @@ model Followers {
   followId   String?
   followers    User?   @relation(fields: [userId], references: [id])
   userId  Int?
+  userName String?
 }

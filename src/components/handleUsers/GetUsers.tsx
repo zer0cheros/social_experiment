@@ -1,16 +1,17 @@
 import React from 'react'
 import type {User} from 'prisma/prisma-client/index'
+import  Router from 'next/router'
 
 
 
 const GetUsers:React.FC<{users: User[]}> = ({users}) => {
-    const handleFollow = async(id: number)=>{
+    const handleFollow = async(id: number, name: string)=>{
         await fetch('http://localhost:3000/api/follow', {
             method:'post',
             headers: {
                 'Content-type' : 'application/json'
             },
-            body : JSON.stringify({id: id})
+            body : JSON.stringify({id: id, name: name})
         })
     }
   return (
@@ -19,7 +20,7 @@ const GetUsers:React.FC<{users: User[]}> = ({users}) => {
         {users.map(user=>(
             <div key={user.id} className='shadow-xl rounded-md p-11 relative m-4'>
             <h1 className='text-semibold text-lg text-white '>{user.name}</h1>
-            <button onClick={()=> handleFollow(user.id)}>Follow</button>
+            <button onClick={()=> handleFollow(user.id, user.name)}>Follow</button>
             </div>
         ))}
     </div>

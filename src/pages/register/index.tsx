@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
 import {motion} from 'framer-motion'
+import Router from 'next/router'
 
 const index = () => {
 
-  const [email, setEmail] = useState('')
+const [email, setEmail] = useState('')
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
-   
+   const handleRegister = async ()=>{
+    const data = {
+      name: username,
+      email: email,
+      password: password
+    }
+    await fetch('/api/register', {headers: {'Content-type': 'application/json'}, method: 'post', body: JSON.stringify(data)})
+   Router.push('/login')
+  }
   return (
     
     <div className='flex justify-center bg-Gunmetal h-100 w-100 font-mono pt-15'>
@@ -16,18 +25,18 @@ const [password, setPassword] = useState('')
          
             <motion.div>
             <br />
-            <input placeholder='Email' id='email' type='email' className=' mt-10 w-23 h-10 rounded'/>
+            <input onChange={({target})=> setEmail(target.value)} placeholder='Email' id='email' type='email' className=' mt-10 w-23 h-10 rounded'/>
             <br />
-            <input placeholder='Username' id='username' type='text' className='mt-8 w-23 h-10 rounded'/>
+            <input onChange={({target})=> setUsername(target.value)} placeholder='Username' id='username' type='text' className='mt-8 w-23 h-10 rounded'/>
             <br />
-            <input placeholder='Password' id='password' type="password" className='mt-8 w-23 h-10 rounded'/>
+            <input onChange={({target})=> setPassword(target.value)} placeholder='Password' id='password' type="password" className='mt-8 w-23 h-10 rounded'/>
             <br />
             <input placeholder='Confirm Password' id='conpassword' type='password' className='mt-8 w-23 h-10 rounded'/>
             <br />
             </motion.div>
 
             <div className='mt-10'>
-                <button className='bg-Glaucous border text-white w-23 h-10 rounded' id='register'>Register</button>
+                <button onClick={handleRegister} className='bg-Glaucous border text-white w-23 h-10 rounded' id='register'>Register</button>
             </div>
             <br />
             <p className='pt-6'>Already have an account?</p>
