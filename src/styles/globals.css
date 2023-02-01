@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+#register:hover {
+background-color: #282B30;
+border: 2px solid #7289DA;
+}
