@@ -1,4 +1,3 @@
-
 import type { User } from "prisma/prisma-client"
 import GetUsers from "../components/handleUsers/GetUsers"
 import TopbarScroll from "../components/Topbar/Topbar_comp"
@@ -25,4 +24,3 @@ export default function Home({users}:any) {
     </> 
   )
 }
-
