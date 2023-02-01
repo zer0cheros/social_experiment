@@ -19,6 +19,7 @@ module.exports = {
         '500': '500px',
         '600': '600px',
         },
+
       colors: {
         'Glaucous': '#7289DA',
         'Liberty': '#465CAB',
@@ -27,6 +28,10 @@ module.exports = {
         'EerieBlack': '#1E2124',
         'Ruby': '#D81E5B',
       },
+      margin: {
+        '15':   '15rem',
+        
+}
       height: {
         '100': '100vh',
         '50': '50rem',
