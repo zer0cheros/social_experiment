@@ -16,3 +16,13 @@ content-type: application/json
     "email" : "cviss@gmail.com",
     "password": "123456"
 }
+###
+
+POST http://localhost:3000/api/post HTTP/1.1
+content-type: application/json
+
+{
+    "title": "rubrik 1",
+    "content" : "bla bla bla"
+}
+
