@@ -15,8 +15,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "typeRoots": ["./node_modules/@types", "./src/types", "middleware.ts"]
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": ["next-env.d.ts", "middleware.ts", "**/*.ts", "**/*.tsx", "pages/_document.js", "pages/auth/signin.ts", "queries.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

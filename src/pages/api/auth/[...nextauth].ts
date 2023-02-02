@@ -38,19 +38,12 @@ export default NextAuth({
       },
     }),
   ],
-  session: {
-    strategy: 'jwt'
-  },
   pages: {
     signIn: '/login',
     newUser: '/register',
     error: '/auth/error'
   },
   debug: process.env.NODE_ENV === "development",
-  adapter: PrismaAdapter(prisma),
-  jwt: {
-    secret: process.env.NEXTAUTH_JWT_SECRET,
-  },
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async session({session}){

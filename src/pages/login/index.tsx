@@ -7,7 +7,7 @@ const login = () => {
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 const handleLogin = async ()=>{
-  await signIn('credentials', {email: email, password: password, callbackUrl: '/'})
+  await signIn('credentials', {email, password, callbackUrl: '/'})
 }
   return (
     <div className="flex justify-center bg-Onyx h-screen">

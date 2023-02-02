@@ -6,10 +6,8 @@ export default withAuth(
     //console.log(req.nextauth.token)
   },
   {
-    pages: {
-        signIn: '/login'
-    }
+    
   }
 )
 
-export const config = { matcher: ["/"] }
+export const config = { matcher: ["/", '/profile/:path*'] }
